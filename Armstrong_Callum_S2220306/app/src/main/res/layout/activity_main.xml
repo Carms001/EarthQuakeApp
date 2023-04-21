@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!--
+    My Details
+    Name                 Callum Armstrong
+    Student ID           2220306
+    Programme of Study   Computing
+    -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- Start Table showing all the compants at the start -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/startTable">
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/salutation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Welcome to Mobile Platform Development"/>
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Press to get data"/>
+
+            </TableRow>
+
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/acknowledgement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Contains British Geological Survey materials ©NERC 2019"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- Extra Info button -->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cool Info"
+            android:visibility="gone"
+            android:id="@+id/extraInfoBtn"
+            />
+
+        <!-- Search Table Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Options"
+            android:visibility="gone"
+            android:id="@+id/searchFilterBtn"
+            />
+
+        <!-- Search Table -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:visibility="gone"
+            android:id="@+id/searchTable">
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchContext"
+                    android:text="Please Enter a Date you want to Search\nExample: 14/04/2023"
+                    android:textAlignment="center"
+                    android:textSize="60px"
+                    />
+
+            </TableRow>
+
+
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchBar"
+                    android:text="14/04/2023"
+                    android:textAlignment="center"
+                    android:textSize="60px" />
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchError"
+                    android:text="Error: Please enter a valid Date Format!!"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    android:textSize="60px"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search By Date"
+                    android:visibility="gone"
+                    android:id="@+id/dateSearch"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="======================================="/>
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/locationSpinner"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search By Location"
+                    android:visibility="gone"
+                    android:id="@+id/locationSearch"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="======================================="/>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <!-- Filter Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter Options"
+            android:visibility="gone"
+            android:id="@+id/filterBtn"
+            />
+        <TextView
+            android:id="@+id/filterBtnContext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Filter By:"
+            android:visibility="gone"/>
+
+        <!-- Filter Table -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:visibility="gone"
+            android:id="@+id/filterTable">
+
+            <TableRow android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/magSortBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Magnitude"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/dateSortBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:visibility="gone" />
+                <Button
+                    android:id="@+id/depthSortBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Depth"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+    </TableLayout>
+        <!-- Filtered By:  -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/filteredBy"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="60px"
+            android:visibility="gone"/>
+
+        <!-- Data Table  -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dataTable">
+        </TableLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".searchDateActivity">
+
+    <!--
+    My Details
+    Name                 Callum Armstrong
+    Student ID           2220306
+    Programme of Study   Computing
+    -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+        <!-- TextView for displaying what was searched -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/itemSearched"
+            android:textSize="70px"
+            />
+
+        <!-- table for showing the tiltes for the rows -->
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:divider="#b0b0b0"
+            android:dividerPadding="5px"
+            android:id="@+id/titlesTable">
+
+
+
+        </TableLayout>
+
+
+        <!-- Search Results Table -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:id="@+id/searchResults">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=""
+                android:textSize="60px"
+                android:id="@+id/locationDateSwap" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Magnitude"
+                android:textSize="60px"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Depth"
+                android:textSize="60px"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
